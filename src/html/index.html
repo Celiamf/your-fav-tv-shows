@@ -3,18 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adalab Web Starter Kit</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <title>Busca tu serie</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="icon" href="./assets/images/favicon.png" />
   </head>
 
   <body>
-    <div class="page">
-      <include src="./partials/header.html" title="Bienvenidos a Adalab"></include>
-      <include src="./partials/main.html"></include>
-      <include src="./partials/footer.html"></include>
-    </div>
+    <header>
+      <h1>Buscador de series</h1>
+    </header>
+    <main>
+      <form>
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="Introduce la serie que quieras buscar"
+          class="js-input"
+        />
+        <input type="button" value="Busca" class="js-searchBtn" />
+      </form>
+    </main>
+    <aside>
+      <h2>Mis favoritas</h2>
+      <ul class="js-favContainer"></ul>
+    </aside>
+    <section>
+      <ul class="js-searchContainer"></ul>
+    </section>
+
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
