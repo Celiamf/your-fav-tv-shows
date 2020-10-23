@@ -8,26 +8,28 @@ let results = [];
 // debugger;
 function getData() {
   const inputValue = input.value;
-  console.log(inputValue);
+  // console.log(inputValue);
   fetch(`http://api.tvmaze.com/search/shows?q=${inputValue}`)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      console.log(data.length);
+      // console.log(data.length);
       results = data;
       renderResults();
     });
 }
 
 function renderResults() {
+  let filledHtml = "";
   for (let result of results) {
-    rsltContainer.innerHTML += "<li>";
-    rsltContainer.innerHTML += `<h3>${result.show.name}</h3>`;
-    rsltContainer.innerHTML += `<img src="${result.show.image.medium}"/>`;
-    rsltContainer.innerHTML += "</li>";
+    filledHtml += "<li>";
+    filledHtml += `<h3>${result.show.name}</h3>`;
+    filledHtml += `<img src="${result.show.image.medium}"/>`;
+    filledHtml += "</li>";
   }
-  console.log("render funciona tb");
+  rsltContainer.innerHTML = filledHtml;
+  // console.log("render funciona tb");
 }
 
 getData();

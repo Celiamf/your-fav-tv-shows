@@ -1,0 +1,11 @@
+.resultsWrapper {
+  // background-color: lightblue;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
+  &__results {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

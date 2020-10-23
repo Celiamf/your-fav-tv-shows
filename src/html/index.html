@@ -15,8 +15,8 @@
   <body>
     <header>
       <h1>Buscador de series</h1>
-    </header>
-    <main>
+    
+  
       <form>
         <input
           type="text"
@@ -24,17 +24,22 @@
           id=""
           placeholder="Introduce la serie que quieras buscar"
           class="js-input"
+          value="girls"
         />
         <input type="button" value="Busca" class="js-searchBtn button" />
       </form>
-    </main>
-    <aside>
+    </header>
+    <main class="main">
+
+    <section class="resultsWrapper">
+      <h2 class="resultsWrapper__title">Resultados</h2>
+      <ul class="resultsWrapper__results js-searchContainer"></ul>
+    </section>
+    <aside class="favWrapper">
       <h2>Mis favoritas</h2>
       <ul class="js-favContainer"></ul>
     </aside>
-    <section>
-      <ul class="js-searchContainer"></ul>
-    </section>
+    <main>
 
     <script src="./assets/js/main.js"></script>
   </body>
