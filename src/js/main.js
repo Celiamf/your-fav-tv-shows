@@ -2,10 +2,14 @@
 
 const btn = document.querySelector(".js-searchBtn");
 const rsltContainer = document.querySelector(".js-searchContainer");
+const input = document.querySelector(".js-input");
 let results = [];
 
+// debugger;
 function getData() {
-  fetch("http://api.tvmaze.com/search/shows?q=game")
+  const inputValue = input.value;
+  console.log(inputValue);
+  fetch(`http://api.tvmaze.com/search/shows?q=${inputValue}`)
     .then(function (response) {
       return response.json();
     })
@@ -28,6 +32,6 @@ function renderResults() {
 
 getData();
 
-// btn.addEventListener("click", handleSearch());
+btn.addEventListener("click", getData);
 
 // btn.addEventListener("click", getData());
