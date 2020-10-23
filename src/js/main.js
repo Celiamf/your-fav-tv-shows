@@ -5,7 +5,7 @@ const rsltContainer = document.querySelector(".js-searchContainer");
 let results = [];
 
 function getData() {
-  fetch("http://api.tvmaze.com/search/shows?q=girls")
+  fetch("http://api.tvmaze.com/search/shows?q=game")
     .then(function (response) {
       return response.json();
     })
@@ -20,7 +20,7 @@ function renderResults() {
   for (let result of results) {
     rsltContainer.innerHTML += "<li>";
     rsltContainer.innerHTML += `<h3>${result.show.name}</h3>`;
-    rsltContainer.innerHTML += `<img src="${result.image}"/>`;
+    rsltContainer.innerHTML += `<img src="${result.show.image.medium}"/>`;
     rsltContainer.innerHTML += "</li>";
   }
   console.log("render funciona tb");
