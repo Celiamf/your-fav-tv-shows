@@ -15,7 +15,7 @@ function handleSearch() {
 
 function getData() {
   const inputValue = input.value;
-  fetch(`http://api.tvmaze.com/search/shows?q=${inputValue}`)
+  fetch(`//api.tvmaze.com/search/shows?q=${inputValue}`)
     .then(function (response) {
       return response.json();
     })
