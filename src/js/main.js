@@ -51,7 +51,7 @@ function renderResults() {
 // 1º Guarda las tarjetas clickadas en un array & convierte el ID en número
 // 2º Condicional: si el indexOf devuelve > -1 es que la tarjeta seleccionada sí está en el array, entonces hay que AÑADIRLE la clase favCard
 
-function handleFavList(event) {
+function handleFav(event) {
   clickedCard = parseInt(event.currentTarget.id);
   const isFav = favList.indexOf(clickedCard);
   if (isFav === -1) {
@@ -66,7 +66,7 @@ function handleFavList(event) {
 function listenToCards() {
   const cards = document.querySelectorAll(".js-card");
   for (const card of cards) {
-    card.addEventListener("click", handleFavList);
+    card.addEventListener("click", handleFav);
   }
 }
 
