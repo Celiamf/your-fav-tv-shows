@@ -8,13 +8,11 @@ let results = [];
 // debugger;
 function getData() {
   const inputValue = input.value;
-  // console.log(inputValue);
   fetch(`http://api.tvmaze.com/search/shows?q=${inputValue}`)
     .then(function (response) {
       return response.json();
     })
     .then(function (data) {
-      // console.log(data.length);
       results = data;
       renderResults();
     });
@@ -23,17 +21,21 @@ function getData() {
 function renderResults() {
   let filledHtml = "";
   for (let result of results) {
-    filledHtml += "<li>";
-    filledHtml += `<h3>${result.show.name}</h3>`;
-    filledHtml += `<img src="${result.show.image.medium}"/>`;
-    filledHtml += "</li>";
+    if (result.show.image === null) {
+      filledHtml += "<li>";
+      filledHtml += `<h3>${result.show.name}</h3>`;
+      filledHtml += `<img src="https://via.placeholder.com/210x296/f0ffff/00008b/?text=No+image+available"/>`;
+      filledHtml += "</li>";
+    } else {
+      filledHtml += "<li>";
+      filledHtml += `<h3>${result.show.name}</h3>`;
+      filledHtml += `<img src="${result.show.image.medium}"/>`;
+      filledHtml += "</li>";
+    }
   }
   rsltContainer.innerHTML = filledHtml;
-  // console.log("render funciona tb");
 }
 
 getData();
 
 btn.addEventListener("click", getData);
-
-// btn.addEventListener("click", getData());
