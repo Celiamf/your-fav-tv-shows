@@ -2,8 +2,10 @@
   background-color: cadetblue;
   color: whitesmoke;
   border-radius: 10%;
+  border: solid 2px #46474f;
   padding: 5px;
   &:hover {
     cursor: pointer;
+    background-color: darken(cadetblue, 15%);
   }
 }

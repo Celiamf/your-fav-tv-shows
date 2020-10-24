@@ -1,0 +1,42 @@
+.asideFav {
+  background-color: lightsteelblue;
+  width: 30%;
+  min-height: 250px;
+  min-width: min-content;
+  display: flex;
+  flex-direction: column;
+  margin: 24px;
+  padding: 12px;
+  border-radius: 6px;
+  &__title {
+    padding: 12px 12px 6px 24px;
+    color: #46474f;
+  }
+}
+
+.favWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.favCard {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: solid 3px darkcyan;
+  border-radius: 5%;
+  margin: 24px;
+  padding: 6px;
+  &__title {
+    padding-bottom: 6px;
+  }
+  &__img {
+    border-radius: 5%;
+    width: 168px;
+  }
+}

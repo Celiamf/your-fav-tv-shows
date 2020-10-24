@@ -1,0 +1,43 @@
+.resultsSection {
+  background-color: lightblue;
+  width: 70%;
+  min-width: min-content;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  padding: 12px;
+  border-radius: 6px;
+  // flex-wrap: wrap;
+  &__title {
+    padding: 12px 12px 6px 24px;
+    color: #46474f;
+  }
+  &__results {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 12px;
+  }
+}
+
+.card {
+  background-color: mintcream;
+  color: darkcyan;
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 12px;
+  &__title {
+    padding-bottom: 6px;
+  }
+}
+
+.highlightCard {
+  background-color: darkcyan;
+  color: mintcream;
+}

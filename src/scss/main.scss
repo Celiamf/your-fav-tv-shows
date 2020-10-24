@@ -1,13 +1,10 @@
 @import "core/variables";
 @import "core/reset";
-// @import "components/code";
-// @import "components/links";
 @import "components/button";
 @import "components/card";
-@import "layout/page";
-// @import "layout/header";
-// @import "layout/footer";
-@import "layout/wrapper";
-@import "layout/aside";
-@import "layout/section";
+@import "layout/01_page";
+@import "layout/02_header";
+@import "layout/03_wrapper-main";
+@import "layout/04_results-section";
+@import "layout/05_aside";
 @import "pages/index";

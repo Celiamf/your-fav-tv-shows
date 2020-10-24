@@ -22,11 +22,11 @@ function renderResults() {
   let filledHtml = "";
   for (let index = 0; index < results.length; index++) {
     filledHtml += `<li class="card js-card" id="${[index]}">`;
-    filledHtml += `<h3>${results[index].show.name}</h3>`;
+    filledHtml += `<h3 class="card__title">${results[index].show.name}</h3>`;
     if (results[index].show.image === null) {
       filledHtml += `<img src="//via.placeholder.com/210x296/f0ffff/00008b/?text=No+image+available"/>`;
     } else {
-      filledHtml += `<img src="${results[index].show.image.medium}"/>`;
+      filledHtml += `<img class="card__img" src="${results[index].show.image.medium}"/>`;
     }
     filledHtml += "</li>";
     rsltContainer.innerHTML = filledHtml;
