@@ -29,20 +29,34 @@ function getData() {
 function renderResults() {
   let filledHtml = "";
   for (let index = 0; index < results.length; index++) {
+    filledHtml += `<li class="card js-card" id="${[index]}">`;
+    filledHtml += `<h3>${results[index].show.name}</h3>`;
     if (results[index].show.image === null) {
-      filledHtml += `<li class="card js-card" id="${[index]}">`;
-      filledHtml += `<h3>${results[index].show.name}</h3>`;
       filledHtml += `<img src="//via.placeholder.com/210x296/f0ffff/00008b/?text=No+image+available"/>`;
-      filledHtml += "</li>";
     } else {
-      filledHtml += `<li class="card js-card" id="${[index]}">`;
-      filledHtml += `<h3>${results[index].show.name}</h3>`;
       filledHtml += `<img src="${results[index].show.image.medium}"/>`;
-      filledHtml += "</li>";
     }
+    filledHtml += "</li>";
     rsltContainer.innerHTML = filledHtml;
   }
 }
+
+// //NUEVA FUNCIÓN QUE SOLO PINTE LAS TARJETAS
+
+// function paintCards(htmlToFill) {
+//   if (results[index].show.image === null) {
+//     filledHtml += `<li class="card js-card" id="${[index]}">`;
+//     filledHtml += `<h3>${results[index].show.name}</h3>`;
+//     filledHtml += `<img src="//via.placeholder.com/210x296/f0ffff/00008b/?text=No+image+available"/>`;
+//     filledHtml += "</li>";
+//   } else {
+//     filledHtml += `<li class="card js-card" id="${[index]}">`;
+//     filledHtml += `<h3>${results[index].show.name}</h3>`;
+//     filledHtml += `<img src="${results[index].show.image.medium}"/>`;
+//     filledHtml += "</li>";
+//   }
+//   htmlToFill.innerHTML = filledHtml;
+// }
 
 // getData(); <--- ESTO LO PUSE AQUÍ ORIGINALLY Y LUEGO LO MOVÍ DENTRO DE HANDLESEARCH --- CHECK
 
