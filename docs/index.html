@@ -11,36 +11,30 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="icon" href="./assets/images/favicon.png" />
   </head>
-
   <body>
     <header>
-      <h1>Buscador de series</h1>
-    
-  
+      <h1 class="title">Buscador de series</h1>
       <form>
         <input
           type="text"
-          name=""
-          id=""
-          placeholder="Introduce la serie que quieras buscar"
-          class="js-input"
-          value="girls" 
+          name="text"
+          placeholder="Escribe aquí la serie que quieras buscar"
+          class="textInput js-input"
+          value="" 
         />
         <input type="button" value="Busca" class="js-searchBtn button" />
       </form>
     </header>
     <main class="main">
-
-    <section class="resultsWrapper">
-      <h2 class="resultsWrapper__title">Resultados</h2>
-      <ul class="resultsWrapper__results js-searchContainer"></ul>
+    <section class="resultsSection">
+      <h2 class="resultsSection__title">Resultados</h2>
+      <ul class="resultsSection__results js-searchContainer"></ul>
     </section>
-    <aside class="favWrapper">
-      <h2>Mis favoritas</h2>
-      <ul class="js-favContainer"></ul>
+    <aside class="asideFav">
+      <h2 class="asideFav__title">Mis favoritas</h2>
+      <ul class="favWrapper js-favContainer"></ul>
     </aside>
     <main>
-
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
