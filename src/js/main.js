@@ -11,6 +11,7 @@ let clickedCard;
 function handleSearch() {
   getData();
   renderResults();
+  listenToCards();
 }
 
 function getData() {
@@ -22,25 +23,22 @@ function getData() {
     .then(function (data) {
       results = data;
       // renderResults(); <--- ESTO LO PUSE AQUÍ ORIGINALLY Y LUEGO LO MOVÍ DENTRO DE HANDLESEARCH --- CHECK
-      listenToCards();
     });
 }
 
 function renderResults() {
+  let filledHtml = "";
   for (let index = 0; index < results.length; index++) {
-    let filledHtml = "";
-    for (let result of results) {
-      if (result.show.image === null) {
-        filledHtml += `<li class="card js-card" id="${[index++]}">`;
-        filledHtml += `<h3>${result.show.name}</h3>`;
-        filledHtml += `<img src="//via.placeholder.com/210x296/f0ffff/00008b/?text=No+image+available"/>`;
-        filledHtml += "</li>";
-      } else {
-        filledHtml += `<li class="card js-card" id="${[index++]}">`;
-        filledHtml += `<h3>${result.show.name}</h3>`;
-        filledHtml += `<img src="${result.show.image.medium}"/>`;
-        filledHtml += "</li>";
-      }
+    if (results[index].show.image === null) {
+      filledHtml += `<li class="card js-card" id="${[index]}">`;
+      filledHtml += `<h3>${results[index].show.name}</h3>`;
+      filledHtml += `<img src="//via.placeholder.com/210x296/f0ffff/00008b/?text=No+image+available"/>`;
+      filledHtml += "</li>";
+    } else {
+      filledHtml += `<li class="card js-card" id="${[index]}">`;
+      filledHtml += `<h3>${results[index].show.name}</h3>`;
+      filledHtml += `<img src="${results[index].show.image.medium}"/>`;
+      filledHtml += "</li>";
     }
     rsltContainer.innerHTML = filledHtml;
   }
