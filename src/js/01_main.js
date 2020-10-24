@@ -7,3 +7,4 @@ const input = document.querySelector(".js-input");
 let results = [];
 let favList = [];
 let clickedCardID;
+let favCardID;

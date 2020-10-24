@@ -6,6 +6,15 @@ function listenToCards() {
   }
 }
 
+function handleFav() {
+  saveFav();
+}
+
+// ----- Removes clicked card from "My favorites"
+function clearFav() {
+  favContainer.innerHTML = ""; // Elimina TODAS las favoritas
+}
+
 // ----- Saves & highlights the clicked card into the favorite list array or removes it if it's already saved
 function handleFav(event) {
   clickedCardID = parseInt(event.currentTarget.id);
@@ -17,8 +26,9 @@ function handleFav(event) {
   } else if (isFav > -1) {
     favList.splice(isFav, 1);
     event.currentTarget.classList.remove("highlightCard");
-    // clearFav();
+    clearFav();
   }
+  setLocalStorage();
 }
 
 // ----- Shows clicked card under "My favorites"
@@ -34,8 +44,3 @@ function paintFav() {
   filledFavHtml += "</li>";
   favContainer.innerHTML = filledFavHtml;
 }
-
-// ----- Removes clicked card from "My favorites"
-// function clearFav() {
-//   favContainer.innerHTML = "";
-// }
