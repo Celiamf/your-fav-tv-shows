@@ -6,7 +6,6 @@ const favContainer = document.querySelector(".js-favContainer");
 const input = document.querySelector(".js-input");
 let results = [];
 let favList = [];
-// let favCardID;
 let filledHtml;
 let item;
 let cardClass = "card";

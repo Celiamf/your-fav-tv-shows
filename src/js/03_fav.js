@@ -27,7 +27,7 @@ function paintFav() {
   for (item = 0; item < favList.length; item++) {
     paint(favContainer, favCardClass);
   }
-  // setLocalStorage();
+  setLocalStorage();
 }
 
 // ----- Removes clicked card from "My favorites"

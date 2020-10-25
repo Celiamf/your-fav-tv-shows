@@ -23,7 +23,6 @@ function getData() {
 
 // ----- Shows name & image for every search result
 function renderResults() {
-  // rsltContainer.innerHTML = "";
   for (item = 0; item < results.length; item++) {
     paint(rsltContainer, cardClass);
   }
