@@ -6,21 +6,15 @@ function listenToCards() {
   }
 }
 
-function handleFav() {
-  saveFav();
-}
-
-// ----- Removes clicked card from "My favorites"
-function clearFav() {
-  favContainer.innerHTML = ""; // Elimina TODAS las favoritas
-}
-
-// ----- Saves & highlights the clicked card into the favorite list array or removes it if it's already saved
+// // ----- Saves & highlights clicked card into the favorite list array or removes it if it's already saved
 function handleFav(event) {
-  clickedCardID = parseInt(event.currentTarget.id);
-  const isFav = favList.indexOf(clickedCardID);
+  // clickedCardID = parseInt(event.currentTarget.id);
+  item = parseInt(event.currentTarget.id);
+  const isFav = favList.indexOf(item);
+  // const isFav = favList.indexOf(clickedCardID);
   if (isFav === -1) {
-    favList.push(clickedCardID);
+    favList.push(item);
+    // favList.push(clickedCardID);
     event.currentTarget.classList.add("highlightCard");
     paintFav();
   } else if (isFav > -1) {
@@ -28,19 +22,30 @@ function handleFav(event) {
     event.currentTarget.classList.remove("highlightCard");
     clearFav();
   }
-  setLocalStorage();
 }
 
 // ----- Shows clicked card under "My favorites"
-let filledFavHtml = "";
 function paintFav() {
-  filledFavHtml += `<li class="card favCard js-card" id="${clickedCardID}">`;
-  filledFavHtml += `<h3 class="favCard__title">${results[clickedCardID].show.name}</h3>`;
-  if (results[clickedCardID].show.image === null) {
-    filledFavHtml += `<img class="favCard__img" src="//via.placeholder.com/210x296/f0ffff/00008b/?text=No+image+available"/>`;
-  } else {
-    filledFavHtml += `<img class="favCard__img" src="${results[clickedCardID].show.image.medium}"/>`;
-  }
-  filledFavHtml += "</li>";
-  favContainer.innerHTML = filledFavHtml;
+  filledHtml = ""; // ----- MIRAR SI ESTO FUNCIONA CON UN CONDICIONAL
+  paint(favContainer, favCardClass);
+  setLocalStorage();
+}
+
+// let filledFavHtml = "";
+// function paintFav() {
+//   filledFavHtml += `<li class="card favCard js-card" id="${[clickedCardID]}">`;
+//   filledFavHtml += `<h3 class="favCard__title">${results[clickedCardID].show.name}</h3>`;
+//   if (results[clickedCardID].show.image === null) {
+//     filledFavHtml += `<img class="favCard__img" src="//via.placeholder.com/210x296/f0ffff/00008b/?text=No+image+available"/>`;
+//   } else {
+//     filledFavHtml += `<img class="favCard__img" src="${results[clickedCardID].show.image.medium}"/>`;
+//   }
+//   filledFavHtml += "</li>";
+//   favContainer.innerHTML = filledFavHtml;
+//   setLocalStorage();
+// }
+
+// ----- Removes clicked card from "My favorites"
+function clearFav() {
+  favContainer.innerHTML = ""; // Elimina TODAS las favoritas
 }
