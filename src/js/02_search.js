@@ -1,5 +1,9 @@
 // ----- Listens to click on Search button
 btn.addEventListener("click", handleSearch);
+// btn.addEventListener("keypress", function (e) {
+//   if (e.key === "Enter") {
+//   }
+// });
 
 // ----- Activates actions when Search button is clicked
 function handleSearch() {
