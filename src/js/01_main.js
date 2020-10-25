@@ -8,5 +8,6 @@ let results = [];
 let favList = [];
 let filledHtml;
 let item;
+let clickedCardID;
 let cardClass = "card";
 let favCardClass = "favCard";

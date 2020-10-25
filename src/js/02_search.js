@@ -5,7 +5,7 @@ btn.addEventListener("click", handleSearch);
 function handleSearch() {
   filledHtml = "";
   getData();
-  renderResults();
+  paintResults();
   listenToCards();
 }
 
@@ -22,8 +22,9 @@ function getData() {
 }
 
 // ----- Shows name & image for every search result
-function renderResults() {
+function paintResults() {
   for (item = 0; item < results.length; item++) {
-    paint(rsltContainer, cardClass);
+    paint(rsltContainer, cardClass, item);
   }
+  console.log(results, "<-- Array results");
 }

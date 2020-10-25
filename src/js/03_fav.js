@@ -8,10 +8,11 @@ function listenToCards() {
 
 // // ----- Saves & highlights clicked card into the favorite list array or removes it if it's already saved
 function handleFav(event) {
-  item = parseInt(event.currentTarget.id);
-  const isFav = favList.indexOf(item);
+  clickedCardID = parseInt(event.currentTarget.id);
+  console.log("ID (index) de la tarjeta clickada -->", clickedCardID);
+  const isFav = favList.indexOf(clickedCardID);
   if (isFav === -1) {
-    favList.push(item);
+    favList.push(clickedCardID);
     event.currentTarget.classList.add("highlightCard");
     paintFav();
   } else if (isFav > -1) {
@@ -24,9 +25,7 @@ function handleFav(event) {
 // ----- Shows clicked card under "My favorites"
 function paintFav() {
   filledHtml = "";
-  for (item = 0; item < favList.length; item++) {
-    paint(favContainer, favCardClass);
-  }
+  paint(favContainer, favCardClass, clickedCardID);
   setLocalStorage();
 }
 
