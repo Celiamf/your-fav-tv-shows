@@ -6,16 +6,7 @@ const favContainer = document.querySelector(".js-favContainer");
 const input = document.querySelector(".js-input");
 let results = [];
 let item;
-let clickedCardID;
-let cardClass = "card";
-let favCardClass = "favCard";
-let favList = [
-  // {
-  //   show: {
-  //     name: "",
-  //     image: "",
-  //   },
-  // },
-];
+let isFav;
+let favList = [];
 
-getLocalStorage();
+// getLocalStorage();

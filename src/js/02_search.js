@@ -1,10 +1,5 @@
 // ----- Listens to click on Search button
 btn.addEventListener("click", handleSearch);
-// btn.addEventListener("keypress", function (e) {
-//   if (e.key === "Enter") {
-//     handleSearch();
-//   }
-// });
 
 // ----- Activates actions when Search button is clicked
 function handleSearch() {
@@ -27,9 +22,17 @@ function getData() {
 
 // ----- Shows name & image for every search result
 function paintResults() {
-  rsltContainer.innerHTML = "";
+  let filledHtml = "";
   for (item = 0; item < results.length; item++) {
-    paint(rsltContainer, cardClass, item);
+    // si es fav le meto la clase
+    filledHtml += `<li class="card js-card" id="${item}">`;
+    filledHtml += `<h3 class="card__title">${results[item].show.name}</h3>`;
+    if (results[item].show.image === null) {
+      filledHtml += `<img class="card__img" src="//via.placeholder.com/210x296/f0ffff/00008b/?text=No+image+available"/>`;
+    } else {
+      filledHtml += `<img class="card__img" src="${results[item].show.image.medium}"/>`;
+    }
+    filledHtml += "</li>";
   }
-  console.log(results, "<-- Array results");
+  rsltContainer.innerHTML = filledHtml;
 }
