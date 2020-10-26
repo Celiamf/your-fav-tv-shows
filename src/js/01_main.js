@@ -5,9 +5,17 @@ const rsltContainer = document.querySelector(".js-searchContainer");
 const favContainer = document.querySelector(".js-favContainer");
 const input = document.querySelector(".js-input");
 let results = [];
-let favList = [];
-let filledHtml;
 let item;
 let clickedCardID;
 let cardClass = "card";
 let favCardClass = "favCard";
+let favList = [
+  // {
+  //   show: {
+  //     name: "",
+  //     image: "",
+  //   },
+  // },
+];
+
+getLocalStorage();
