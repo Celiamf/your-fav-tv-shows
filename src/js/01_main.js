@@ -9,4 +9,4 @@ let item;
 let isFav;
 let favList = [];
 
-// getLocalStorage();
+getLocalStorage();
