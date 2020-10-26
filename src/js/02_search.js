@@ -24,8 +24,13 @@ function getData() {
 function paintResults() {
   let filledHtml = "";
   for (item = 0; item < results.length; item++) {
-    // si es fav le meto la clase
-    filledHtml += `<li class="card js-card" id="${item}">`;
+    let cardShowID = results[item].show.id;
+    isFav = favList.findIndex((favItem) => favItem.show.id === cardShowID);
+    if (isFav !== -1) {
+      filledHtml += `<li class="card highlightCard js-card" id="${item}">`;
+    } else {
+      filledHtml += `<li class="card js-card" id="${item}">`;
+    }
     filledHtml += `<h3 class="card__title">${results[item].show.name}</h3>`;
     if (results[item].show.image === null) {
       filledHtml += `<img class="card__img" src="//via.placeholder.com/210x296/f0ffff/00008b/?text=No+image+available"/>`;
