@@ -10,3 +10,18 @@
     background-color: darken(cadetblue, 15%);
   }
 }
+
+.clearButton {
+  width: 100px;
+  align-self: flex-end;
+  margin-right: 12px;
+  margin-top: 12px;
+  border-radius: 5%;
+  background-color: #46474f;
+  color: whitesmoke;
+  padding: 5px;
+  &:hover {
+    cursor: pointer;
+    background-color: darken(cadetblue, 15%);
+  }
+}
