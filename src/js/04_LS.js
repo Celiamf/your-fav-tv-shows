@@ -4,7 +4,12 @@ function setLocalStorage() {
 
 function getLocalStorage() {
   const localFav = localStorage.getItem("favList");
-  const localFavJson = JSON.parse(localFav);
-  favList = localFavJson;
-  paintFav();
+  if( localFav == null ) {
+    favList = [];
+  }
+  else {
+    const localFavJson = JSON.parse(localFav);
+    favList = localFavJson;
+    paintFav();
+  }
 }
