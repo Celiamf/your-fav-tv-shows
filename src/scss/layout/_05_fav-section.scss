@@ -1,4 +1,4 @@
-.asideFav {
+.favSection {
   background-color: lightsteelblue;
   width: 30%;
   min-height: 250px;
@@ -12,13 +12,12 @@
     padding: 12px 12px 6px 24px;
     color: #46474f;
   }
-}
-
-.favWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .favCard {

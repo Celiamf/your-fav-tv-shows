@@ -37,6 +37,7 @@ function paintResults() {
     } else {
       filledHtml += `<img class="card__img" src="${results[item].show.image.medium}"/>`;
     }
+    filledHtml += `<p>${results[item].show.schedule.time}</p>`;
     filledHtml += "</li>";
   }
   rsltContainer.innerHTML = filledHtml;
