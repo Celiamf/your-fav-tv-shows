@@ -1,27 +1,30 @@
 .button {
-  background-color: cadetblue;
-  color: whitesmoke;
-  border-radius: 10%;
-  border: solid 2px #46474f;
+  background-color: $color-brand3;
+  color: $color-white;
+  border-radius: 6px;
+  border: solid 2px $color-aux2;
   padding: 5px;
   font-size: 16px;
   &:hover {
     cursor: pointer;
-    background-color: darken(cadetblue, 15%);
+    background-color: lighten($color-brand3, 5%);
+    transition: background-color ease 1s;
   }
 }
 
 .clearButton {
   width: 100px;
-  align-self: flex-end;
+  min-width: fit-content;
+  align-self: flex-start;
   margin-right: 12px;
   margin-top: 12px;
-  border-radius: 5%;
-  background-color: #46474f;
-  color: whitesmoke;
+  border-radius: 6px;
+  background-color: $color-aux1;
+  color: $color-white;
   padding: 5px;
   &:hover {
     cursor: pointer;
-    background-color: darken(cadetblue, 15%);
+    background-color: $color-secondary;
+    transition: background-color ease 1s;
   }
 }

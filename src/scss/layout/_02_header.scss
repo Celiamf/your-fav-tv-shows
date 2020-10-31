@@ -1,6 +1,6 @@
 .title {
   padding-bottom: 32px;
-  color: #46474f;
+  color: $color-primary;
 }
 
 .textInput {
@@ -10,6 +10,6 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: solid 2px #46474f;
-  background-color: lighten(#f2c23f, 15%);
+  border-bottom: solid 2px $color-aux2;
+  background-color: lighten($color-brand1, 15%);
 }

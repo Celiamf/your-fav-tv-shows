@@ -8,6 +8,10 @@
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/3cd653d2b1.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="icon" href="./assets/images/CMF_favicon.png" />
   </head>
@@ -31,8 +35,17 @@
         <ul class="resultsSection__results js-searchContainer"></ul>
       </section>
       <section class="favSection">
-        <h2 class="favSection__title">Mis favoritas</h2>
-        <input type="button" value="LOG" class="js-logBtn" />
+        <div class="favSection__header">
+          <h2 class="favSection__header--title">Mis favoritas</h2>
+          <button type="" class="js-clearFavBtn clearButton">
+            <span><i class="fa fa-trash-o"></i></span> Borra la lista
+          </button>
+          <!-- <input
+            type="button"
+            value="&#xf014; Limpia la lista"
+            class="js-clearFavBtn clearButton"
+          /> -->
+        </div>
         <ul class="favSection__wrapper js-favContainer"></ul>
       </section>
     </main>

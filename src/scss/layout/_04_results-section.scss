@@ -1,5 +1,5 @@
 .resultsSection {
-  background-color: lightblue;
+  background-color: $color-secondary;
   width: 70%;
   min-width: min-content;
   min-height: 250px;
@@ -11,7 +11,7 @@
   // flex-wrap: wrap;
   &__title {
     padding: 12px 12px 6px 24px;
-    color: #46474f;
+    color: $color-white;
   }
   &__results {
     width: 100%;
@@ -32,12 +32,14 @@
   align-items: center;
   padding: 12px;
   margin-bottom: 12px;
+  border-color: $color-white solid 1px;
+  box-shadow: 3px 3px 0px $color-aux2;
   &__title {
     padding-bottom: 6px;
   }
 }
 
 .highlightCard {
-  background-color: darkcyan;
-  color: mintcream;
+  background-color: $color-brand1;
+  color: $color-primary;
 }

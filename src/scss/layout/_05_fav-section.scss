@@ -1,16 +1,20 @@
 .favSection {
-  background-color: lightsteelblue;
+  background-color: $color-brand4;
   width: 30%;
   min-height: 250px;
   min-width: min-content;
-  display: flex;
-  flex-direction: column;
   margin: 24px;
   padding: 12px;
   border-radius: 6px;
-  &__title {
-    padding: 12px 12px 6px 24px;
-    color: #46474f;
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &--title {
+      padding: 12px 12px 6px 24px;
+      color: $color-white;
+    }
   }
   &__wrapper {
     display: flex;
@@ -27,13 +31,14 @@
   align-items: center;
   justify-content: center;
   background: none;
-  border: solid 3px darkcyan;
+  border: solid 3px $color-brand1;
   border-radius: 5%;
+  box-shadow: 1px 1px 10px $color-aux2;
   margin: 24px;
   padding: 6px;
   &__title {
     padding-bottom: 6px;
-    color: darken(darkcyan, 5%);
+    color: $color-white;
   }
   &__img {
     border-radius: 5%;
