@@ -41,3 +41,12 @@ function paintFav() {
   favContainer.innerHTML = filledHtml;
   setLocalStorage();
 }
+
+// ----- Clears full favorite list & local storage
+function clearFav() {
+  favContainer.innerHTML = "";
+  favList.length = 0;
+  setLocalStorage();
+}
+
+clearBtn.addEventListener("click", clearFav);

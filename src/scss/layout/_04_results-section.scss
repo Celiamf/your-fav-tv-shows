@@ -34,6 +34,9 @@
   margin-bottom: 12px;
   border-color: $color-white solid 1px;
   box-shadow: 3px 3px 0px $color-aux2;
+  &:hover {
+    cursor: pointer;
+  }
   &__title {
     padding-bottom: 6px;
   }
