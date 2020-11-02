@@ -8,6 +8,10 @@
       href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/3cd653d2b1.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="icon" href="./assets/images/CMF_favicon.png" />
   </head>
@@ -20,7 +24,7 @@
           name="text"
           placeholder="Escribe aquí la serie que quieras buscar"
           class="textInput js-input"
-          value="girls"
+          value=""
         />
         <input type="button" value="Busca" class="js-searchBtn button" />
       </form>
@@ -30,15 +34,20 @@
         <h2 class="resultsSection__title">Resultados</h2>
         <ul class="resultsSection__results js-searchContainer"></ul>
       </section>
-      <aside class="asideFav">
-        <h2 class="asideFav__title">Mis favoritas</h2>
-        <!-- <input
-          type="button"
-          value="Limpia la lista"
-          class="js-clearFavBtn clearButton"
-        /> -->
-        <ul class="favWrapper js-favContainer"></ul>
-      </aside>
+      <section class="favSection">
+        <div class="favSection__header">
+          <h2 class="favSection__header--title">Mis favoritas</h2>
+          <button type="" class="js-clearFavBtn clearButton">
+            <span><i class="fa fa-trash-o"></i></span> Borra la lista
+          </button>
+          <!-- <input
+            type="button"
+            value="&#xf014; Limpia la lista"
+            class="js-clearFavBtn clearButton"
+          /> -->
+        </div>
+        <ul class="favSection__wrapper js-favContainer"></ul>
+      </section>
     </main>
     <script src="./assets/js/main.js"></script>
   </body>
