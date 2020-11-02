@@ -37,7 +37,12 @@ function paintResults() {
     } else {
       filledHtml += `<img class="card__img" src="${results[item].show.image.medium}"/>`;
     }
-    filledHtml += `<p>${results[item].show.schedule.time}</p>`;
+    if (results[item].show.rating.average === null) {
+      filledHtml += `<p class="card__rating">Valoración: No disponible</p>`;
+    } else {
+      filledHtml += `<p class="card__rating">Valoración: ${results[item].show.rating.average}</p>`;
+    }
+    filledHtml += `<a class="card__link" target="_blank" href="${results[item].show.url}">Más info</a>`;
     filledHtml += "</li>";
   }
   rsltContainer.innerHTML = filledHtml;
