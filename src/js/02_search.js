@@ -33,11 +33,11 @@ function paintResults() {
       filledHtml += `<img class="card__img" src="${results[item].show.image.medium}"/>`;
     }
     if (results[item].show.rating.average === null) {
-      filledHtml += `<p class="card__rating">Valoración: No disponible</p>`;
+      filledHtml += `<p class="card__rating">Rating: Not available</p>`;
     } else {
-      filledHtml += `<p class="card__rating">Valoración: ${results[item].show.rating.average}</p>`;
+      filledHtml += `<p class="card__rating">Rating: ${results[item].show.rating.average}</p>`;
     }
-    filledHtml += `<a class="card__link" target="_blank" href="${results[item].show.url}">Más info</a>`;
+    filledHtml += `<a class="card__link" target="_blank" href="${results[item].show.url}">More info</a>`;
     filledHtml += "</li>";
   }
   rsltContainer.innerHTML = filledHtml;
