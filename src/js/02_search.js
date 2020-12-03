@@ -1,10 +1,10 @@
 btn.addEventListener("click", handleSearch);
 
 function handleSearch() {
-  getData();
+  getDataFromAPI();
 }
 
-function getData() {
+function getDataFromAPI() {
   const inputValue = searchBox.value;
   fetch(`//api.tvmaze.com/search/shows?q=${inputValue}`)
     .then(function (response) {
@@ -13,7 +13,6 @@ function getData() {
     .then(function (data) {
       results = data;
       paintResults();
-      listenToCards();
     });
 }
 
@@ -42,4 +41,5 @@ function paintResults() {
     filledHtml += "</li>";
   }
   rsltContainer.innerHTML = filledHtml;
+  listenToCards();
 }

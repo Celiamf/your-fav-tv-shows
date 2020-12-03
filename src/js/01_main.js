@@ -11,4 +11,3 @@ let item;
 let isFav;
 
 getLocalStorage();
-console.log({ favList });

@@ -22,14 +22,6 @@ function handleFav(event) {
   paintFav();
 }
 
-// function highlight(event) {
-//   if (favList.includes()) {
-//   } else {
-//   }
-
-//   event.currentTarget.classList.toggle("highlightCard");
-// }
-
 function paintFav() {
   let filledHtml = "";
   for (item = 0; item < favList.length; item++) {
@@ -47,27 +39,9 @@ function paintFav() {
   listenToFavs();
 }
 
-function clearFavs() {
-  favContainer.innerHTML = "";
-  favList.length = 0;
-  setLocalStorage();
-  paintResults();
-  listenToCards();
-}
-
 function listenToFavs() {
   const favCards = document.querySelectorAll(".js-favCard");
   for (const favCard of favCards) {
-    favCard.addEventListener("click", removeFav);
+    favCard.addEventListener("click", clearClickedFav);
   }
 }
-
-function removeFav(event) {
-  let clickedFavID;
-  clickedFavID = parseInt(event.currentTarget.id);
-  favList.splice(clickedFavID, 1);
-  paintFav();
-  console.log({ favList });
-}
-
-clearBtn.addEventListener("click", clearFavs);
