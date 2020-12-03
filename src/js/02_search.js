@@ -1,7 +1,5 @@
-// ----- Listens to click on Search button
 btn.addEventListener("click", handleSearch);
 
-// ----- Activates actions when Search button is clicked
 function handleSearch() {
   getData();
 }
@@ -20,7 +18,6 @@ function getData() {
     });
 }
 
-// ----- Shows name & image for every search result
 function paintResults() {
   let filledHtml = "";
   for (item = 0; item < results.length; item++) {

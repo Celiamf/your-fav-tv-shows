@@ -1,4 +1,3 @@
-// ----- Listens to click event on each search result card
 function listenToCards() {
   const cards = document.querySelectorAll(".js-card");
   for (const card of cards) {
@@ -17,12 +16,11 @@ function handleFav(event) {
   if (isFav === -1) {
     favList.push(results[clickedCardID]);
     event.currentTarget.classList.add("highlightCard");
-    paintFav();
   } else if (isFav > -1) {
     favList.splice(isFav, 1);
     event.currentTarget.classList.remove("highlightCard");
-    paintFav();
   }
+  paintFav();
 }
 
 // ----- Shows clicked card under "My favorites"
@@ -42,11 +40,12 @@ function paintFav() {
   setLocalStorage();
 }
 
-// ----- Clears full favorite list & local storage
 function clearFav() {
   favContainer.innerHTML = "";
   favList.length = 0;
   setLocalStorage();
+  paintResults();
+  listenToCards();
 }
 
 clearBtn.addEventListener("click", clearFav);
