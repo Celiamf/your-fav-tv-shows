@@ -5,7 +5,6 @@ function listenToCards() {
   }
 }
 
-// ----- Saves & highlights clicked card into the favorite list array or clears it if it's already saved
 function handleFav(event) {
   let clickedCardID;
   clickedCardID = parseInt(event.currentTarget.id); // Card position in Results array
@@ -23,11 +22,18 @@ function handleFav(event) {
   paintFav();
 }
 
-// ----- Shows clicked card under "My favorites"
+// function highlight(event) {
+//   if (favList.includes()) {
+//   } else {
+//   }
+
+//   event.currentTarget.classList.toggle("highlightCard");
+// }
+
 function paintFav() {
   let filledHtml = "";
   for (item = 0; item < favList.length; item++) {
-    filledHtml += `<li class="favCard js-card" id="${item}">`;
+    filledHtml += `<li class="favCard js-favCard" id="${item}">`;
     filledHtml += `<h3 class="favCard__title">${favList[item].show.name}</h3>`;
     if (favList[item].show.image === null) {
       filledHtml += `<img class="favCard__img" src="//via.placeholder.com/210x296/f0ffff/00008b/?text=No+image+available"/>`;
@@ -38,9 +44,10 @@ function paintFav() {
   }
   favContainer.innerHTML = filledHtml;
   setLocalStorage();
+  listenToFavs();
 }
 
-function clearFav() {
+function clearFavs() {
   favContainer.innerHTML = "";
   favList.length = 0;
   setLocalStorage();
@@ -48,4 +55,19 @@ function clearFav() {
   listenToCards();
 }
 
-clearBtn.addEventListener("click", clearFav);
+function listenToFavs() {
+  const favCards = document.querySelectorAll(".js-favCard");
+  for (const favCard of favCards) {
+    favCard.addEventListener("click", removeFav);
+  }
+}
+
+function removeFav(event) {
+  let clickedFavID;
+  clickedFavID = parseInt(event.currentTarget.id);
+  favList.splice(clickedFavID, 1);
+  paintFav();
+  console.log({ favList });
+}
+
+clearBtn.addEventListener("click", clearFavs);

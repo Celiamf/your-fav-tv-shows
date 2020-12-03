@@ -4,9 +4,8 @@ function handleSearch() {
   getData();
 }
 
-// ----- Brings in data from API & puts them into json form
 function getData() {
-  const inputValue = input.value;
+  const inputValue = searchBox.value;
   fetch(`//api.tvmaze.com/search/shows?q=${inputValue}`)
     .then(function (response) {
       return response.json();
