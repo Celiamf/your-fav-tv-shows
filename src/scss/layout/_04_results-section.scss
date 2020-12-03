@@ -23,19 +23,20 @@
 }
 
 .card {
-  background-color: $color-white;
-  color: $color-brand3;
+  background-color: lighten($color-aux1, 25%);
+  max-width: min-content;
   display: inline-block;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  text-align: center;
   align-items: center;
-  padding: 12px;
-  margin-bottom: 12px;
-  border-color: $color-white solid 1px;
   box-shadow: 3px 3px 0px $color-aux2;
+  padding: 12px 24px;
+  margin-bottom: 24px;
+  color: $color-brand3;
   &:hover {
     cursor: pointer;
+    transform: scale(1.05);
   }
   &__title {
     padding-bottom: 6px;
