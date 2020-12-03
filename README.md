@@ -1,21 +1,33 @@
-# ADALAB - Promo Kizzy - Módulo 2 JavaScript - Ejercicio de evaluación final
+# TV Show Search App
 
-## Celia MF
+This is a search app that allows you to find info about TV shows and save your favorite ones. It was developed under the Adalab Bootcamp Module 3 on React (Kizzy Promotion, sept-dec 2020).
+Click [here](https://celiamf.github.io/your-fav-tv-shows/) to start using the app!
 
-¡Hola! Esta página ha sido creada como ejercicio de evaluación del segundo módulo del curso de programación web de ADALAB, dedicado a JavaScript.
+## Developing
 
-Desde [aquí](http://beta.adalab.es/modulo-2-evaluacion-final-Celiamf/) puedes acceder al **Buscador de series de Celia**, en el que puedes acceder a las series del API abierto de [TVMaze](http://www.tvmaze.com) y guardar tus **favoritas**.
+Clone this repo if you wish to work with the code:
 
-Esta página ha sido utilizando el Web Starter Kit de Adalab, que incluye un motor de plantillas HTML, el preprocesador SASS y un servidor local, entre otras cosas.
+```shell
+git clone https://github.com/Celiamf/your-fav-tv-shows.git
+cd your-fav-tv-shows/
+```
 
-Los archivos que encontrarás en el proyecto se dividen en:
+## Install / Start
 
-- Configuración del proyecto: son los ficheros que están sueltos en la raíz del repositorio, como gulpfile.js, package.json...
-- Carpeta `src/`: son los ficheros de trabajo:
-  -- HTML
-  -- Imágenes
-  -- JavaScript
-  -- SCSS
-- Las carpetas `public/` y `docs/`, que son generadas automáticamente cuando se arranca el proyecto.
+This project was developed with node, so you need to run the following commands in your terminal in order to get it up and running.
 
-¡Contacta para cualquier sugerencia o duda!
+```shell
+npm install
+npm start
+```
+
+## Features
+
+- Type any TV show, click the Search button and get your results from the [TVMaze API](https://www.tvmaze.com/api)
+- You will see the TV show name, image & rating. If you want further details, click on "More info" and you'll navegate to the corresponding show on TVMaze.
+- Click on any TV show to add it to your Favorites list. These will be saved in your local storage, so you won't lose them if you close the app and come back later!
+- Click on any of your saved favorite shows to remove it from the list, or click on the Clear list button to remove them all at once.
+
+## Licensing
+
+The code in this project is licensed under MIT license.
