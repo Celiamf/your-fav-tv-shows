@@ -30,8 +30,9 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+  border-radius: 5px;
   box-shadow: 3px 3px 0px $color-aux2;
-  padding: 12px 24px;
+  padding: 12px 18px 8px 18px;
   margin-bottom: 24px;
   color: $color-brand3;
   &:hover {
