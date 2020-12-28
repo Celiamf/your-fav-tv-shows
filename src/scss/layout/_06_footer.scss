@@ -1,7 +1,11 @@
 .footer {
+  // height: 5%;
   text-align: center;
   color: $color-aux1;
+  margin-top: 36px;
   padding-bottom: 12px;
+  justify-self: flex-end;
+
   &__credits {
     display: block;
   }

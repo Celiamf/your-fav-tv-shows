@@ -4,6 +4,9 @@ body {
   height: 100vh;
   background-color: $color-bg;
   font-family: $font-main;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 li {
