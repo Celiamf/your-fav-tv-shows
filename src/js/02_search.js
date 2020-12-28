@@ -22,9 +22,9 @@ function paintResults() {
     let cardShowID = results[item].show.id;
     isFav = favList.findIndex((favItem) => favItem.show.id === cardShowID);
     if (isFav !== -1) {
-      filledHtml += `<li class="card highlightCard js-card" id="${item}">`;
+      filledHtml += `<li class="card highlightCard js-card" id="${item}" aria-label="Click to add favorite" title="Click to add favorite">`;
     } else {
-      filledHtml += `<li class="card js-card" id="${item}">`;
+      filledHtml += `<li class="card js-card" id="${item}" aria-label="Click to add favorite" title="Click to add favorite">`;
     }
     filledHtml += `<h3 class="card__title">${results[item].show.name}</h3>`;
     if (results[item].show.image === null) {

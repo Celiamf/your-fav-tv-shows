@@ -25,7 +25,7 @@ function handleFav(event) {
 function paintFav() {
   let filledHtml = "";
   for (item = 0; item < favList.length; item++) {
-    filledHtml += `<li class="favCard js-favCard" id="${item}">`;
+    filledHtml += `<li class="favCard js-favCard" id="${item}" aria-label="Click to remove favorite" title="Click to remove favorite">`;
     filledHtml += `<h3 class="favCard__title">${favList[item].show.name}</h3>`;
     if (favList[item].show.image === null) {
       filledHtml += `<img class="favCard__img" src="//via.placeholder.com/210x296/f0ffff/00008b/?text=No+image+available"/>`;
