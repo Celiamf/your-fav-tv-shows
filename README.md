@@ -1,6 +1,6 @@
 # TV Show Search App
 
-This is a search app that allows you to find info about TV shows and save your favorite ones. It was developed under the Adalab Bootcamp Module 3 on JavaScript (Kizzy Promotion, sept-dec 2020).
+This is a search app that allows you to find info about TV shows and save your favorite ones. It was first developed under the Adalab Bootcamp Module 3 on JavaScript, and enriched on my own since.
 Click [here](https://celiamf.github.io/your-fav-tv-shows/) to start using the app!
 
 ## Developing
