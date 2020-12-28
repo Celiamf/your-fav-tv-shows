@@ -4,13 +4,29 @@
   align-self: flex-start;
   margin-right: 12px;
   margin-top: 12px;
+  box-shadow: inset 0px 1px 0px 0px $color-btn-shadow;
+  background: linear-gradient(to bottom, $color-btn-bg 5%, $color-btn-bg2 100%);
+  background-color: $color-btn-bg;
   border-radius: 6px;
-  background-color: $color-aux1;
-  color: $color-white;
-  padding: 5px;
+  border: 1px solid $color-btn-border;
+  color: $color-aux2;
+  font-weight: bold;
+  padding: 6px 12px;
+  // text-decoration: none;
+  text-shadow: 0px 1px 0px $color-btn-shadow;
   &:hover {
     cursor: pointer;
-    background-color: $color-secondary;
-    transition: background-color ease 1s;
+    background: linear-gradient(
+      to bottom,
+      $color-btn-bg2 5%,
+      $color-btn-bg 100%
+    );
+  }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
+  &:focus {
+    outline: thin dotted;
   }
 }

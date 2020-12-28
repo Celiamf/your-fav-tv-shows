@@ -1,0 +1,18 @@
+.footer {
+  text-align: center;
+  color: $color-aux1;
+  padding-bottom: 12px;
+  &__credits {
+    display: block;
+  }
+  &__link {
+    text-decoration: none;
+    color: $color-secondary;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:active {
+      color: $color-brand2;
+    }
+  }
+}
