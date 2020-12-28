@@ -1,9 +1,9 @@
 .favSection {
   background-color: $color-brand4;
   width: 30%;
-  min-height: 250px;
+  min-height: 100%;
   min-width: min-content;
-  margin: 24px;
+  margin: 24px 0 24px 24px;
   padding: 12px;
   border-radius: 6px;
   &__header {

@@ -1,17 +1,3 @@
-.button {
-  background-color: $color-brand3;
-  color: $color-white;
-  border-radius: 6px;
-  border: solid 2px $color-aux2;
-  padding: 5px;
-  font-size: 16px;
-  &:hover {
-    cursor: pointer;
-    background-color: lighten($color-brand3, 5%);
-    transition: background-color ease 1s;
-  }
-}
-
 .clearButton {
   width: 100px;
   min-width: fit-content;

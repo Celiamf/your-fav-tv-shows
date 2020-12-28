@@ -1,4 +1,4 @@
-btn.addEventListener("click", handleSearch);
+searchBox.addEventListener("keyup", handleSearch);
 
 function handleSearch() {
   getDataFromAPI();
