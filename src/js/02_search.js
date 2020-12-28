@@ -18,6 +18,9 @@ function getDataFromAPI() {
 
 function paintResults() {
   let filledHtml = "";
+  if (results.length === 0) {
+    filledHtml += `<div class="noResults"><img class="noResults__img" src="./assets/images/notFoundIcon.png" alt="Magnifying glass"/><p class="noResults__msg">Sorry! No results were found for your search. Please try typing something different.</p></div>`;
+  }
   for (item = 0; item < results.length; item++) {
     let cardShowID = results[item].show.id;
     isFav = favList.findIndex((favItem) => favItem.show.id === cardShowID);

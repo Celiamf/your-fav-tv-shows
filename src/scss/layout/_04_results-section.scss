@@ -10,7 +10,7 @@
   border-radius: 6px;
 
   &__title {
-    padding: 12px 12px 6px 24px;
+    padding: 12px 12px 6px 12px;
     color: $color-white;
   }
   &__results {
@@ -59,4 +59,23 @@
 .highlightCard {
   background-color: $color-brand1;
   color: $color-primary;
+}
+
+.noResults {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 45%;
+  &__msg {
+    color: $color-white;
+    margin-top: 24px;
+    text-align: center;
+    line-height: 2;
+    font-size: 18px;
+  }
+
+  &__img {
+    width: 50%;
+    margin-top: 24px;
+  }
 }
