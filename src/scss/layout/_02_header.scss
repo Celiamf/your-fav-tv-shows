@@ -12,4 +12,7 @@
   border-right: none;
   border-bottom: solid 2px $color-aux2;
   background-color: lighten($color-brand1, 15%);
+  &:focus {
+    outline: thin dotted;
+  }
 }
